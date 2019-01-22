@@ -1,0 +1,27 @@
+<html class="gr__mdjhoel_github_io"><!-- import your data --><head><script src="data.json"></script>
+    
+    </head><body data-gr-c-s-loaded="true"><canvas id="myCanvas" width="1000" height="5000">
+      Your browser does not support the canvas element.
+    </canvas>
+    
+    <script>
+        
+        var canvas = document.getElementById("myCanvas");
+	    var ctx = canvas.getContext("2d");
+        
+        yvalue = 0
+        for (i = 0; i<data.length; i = i + 9) {
+            cname = data[i].dims.COUNTRY;
+            numdead = parseInt(data[i].Value);
+        
+            ctx.fillStyle = "red";
+	        ctx.fillRect(0,yvalue,numdead,10);
+            ctx.fillStyle = "black";
+            ctx.fillText(cname,10,yvalue + 20);
+            yvalue = yvalue + 25;
+        }
+    
+    </script>
+    
+    
+</body></html>
